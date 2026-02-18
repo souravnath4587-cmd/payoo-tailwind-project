@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" data-theme="light">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+      <!-- Css Link  -->
+    <link rel="stylesheet" href="style/style.css">
+
+
+    <!-- Tailwind and daisy Ui Css CDN Link  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+
+    <!-- Google fonts Link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+    <!-- Font Awesome  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body class="min-h-screen max-w-md bg-base-200 mx-auto">
+
+    <div class="logo w-[200px] mx-auto pt-32">
+        <img src="./assets/Logo-full.png" alt="Website logo">
+    </div>
+    <div class="form pt-10">
+        <div class="card bg-base-100 w-full max-w-sm shadow-xl mx-auto rounded-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+          <label class="label capitalize text-neutral font-bold ">Mobile number</label>
+          <input id="input_number" type="number" maxlength="11" class="input rounded-full bg-base-200 " placeholder="Enter your  11 digit mobile number" />
+          <br>
+          <label  class="label  capitalize text-neutral font-bold ">4 digit pin</label>
+          <input id="input_pin" type="password" class="input rounded-full bg-base-200" placeholder="Enter your 4 digit pin" />
+          <button id="login-btn" onclick="" class="btn btn-primary mt-4 rounded-full">Login</button>
+        </fieldset>
+      </div>
+    </div>
+    </div>
+
+    <script src="./script/login.js"></script>
+</body>
+</html>
