@@ -42,38 +42,90 @@
         <p class="text-[#707070] text-[18px]">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
       </div>
       <div class="banner_payment grid grid-cols-3 grid-rows-2 gap-2 justify-between items-center pt-6 pb-6 ">
-        <div class="payment_option flex flex-col justify-center items-center p-4 border-2 border-gray-100 rounded-xl space-y-2">
+        <div onclick="showOnly('add_money')" class=" payment_option flex flex-col justify-center items-center p-4 border-2 border-gray-100 rounded-xl space-y-2">
           <img src="./assets/opt-1.png" alt="Payment Option image 1">
           <p class="capitalize text-[#707070] text-[18px]">add money</p>
         </div>
-        <div class="payment_option flex flex-col justify-center items-center p-4 border-2 border-gray-100 rounded-xl space-y-2">
+        <div onclick="showOnly('cashout')"  class="payment_option  flex flex-col justify-center items-center p-4 border-2 border-gray-100 rounded-xl space-y-2 ">
           <img src="./assets/opt-2.png" alt="Payment Option image 1">
           <p class="capitalize text-[#707070] text-[18px]">cashout</p>
         </div>
-        <div class="payment_option flex flex-col justify-center items-center p-4 border-2 border-gray-100 rounded-xl space-y-2">
+        <div onclick="showOnly('transfer')" class="payment_option  flex flex-col justify-center items-center p-4 border-2 border-gray-100 rounded-xl space-y-2 ">
           <img src="./assets/opt-3.png" alt="Payment Option image 1">
           <p class="capitalize text-[#707070] text-[18px]">Transfer Money</p>
         </div>
-        <div class="payment_option flex flex-col justify-center items-center p-4 border-2 border-gray-100 rounded-xl space-y-2">
+        <div onclick="showOnly('get_bonus')" class="payment_option flex flex-col justify-center items-center p-4 border-2 border-gray-100 rounded-xl space-y-2">
           <img src="./assets/opt-4.png" alt="Payment Option image 1">
           <p class="capitalize text-[#707070] text-[18px]">Get Bonus</p>
         </div>
-        <div class="payment_option flex flex-col justify-center items-center p-4 border-2 border-gray-100 rounded-xl space-y-2">
+        <div onclick="showOnly('pay_bill')" class="payment_option flex flex-col justify-center items-center p-4 border-2 border-gray-100 rounded-xl space-y-2">
           <img src="./assets/opt-5.png" alt="Payment Option image 1">
           <p class="capitalize text-[#707070] text-[18px]">Pay Bill</p>
         </div>
-        <div class="payment_option flex flex-col justify-center items-center p-4 border-2 border-gray-100 rounded-xl space-y-2">
+        <div onclick="showOnly('transactions')" class="payment_option flex flex-col justify-center items-center p-4 border-2 border-gray-100 rounded-xl space-y-2">
           <img src="./assets/opt-6.png" alt="Payment Option image 1">
           <p class="capitalize text-[#707070] text-[18px]">Transactions</p>
         </div>
-     
-        </div>
         
-
       </div>
+      
+      
+    </div>
+    
+  </section>
 
-    </section>
-    <section id="transfer" class="w-11/12 mx-auto py-5">
+  <section id="add_money" class="container w-11/12 mx-auto py-5 ">
+    <h2 class="capitalize text-xl font-bold mb-5">Add Money</h2>
+    <div class="card bg-base-400 w-full shadow rounded-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+          <select id="bank_name" class="select my-2 select-ghost input w-full rounded-full bg-base-200 ">
+            <option disabled selected>Select Bank</option>
+            <option>Pubali</option>
+            <option>Sonali</option>
+            <option>IBM</option>
+          </select>
+          <label class="label capitalize text-neutral font-bold ">Bank Account Number</label>
+          <input  id="account_number" value="01799052958" type="number" maxlength="11" class="input w-full rounded-full bg-base-200" value="" placeholder="Enter your  11 digit account number" />
+          <br>
+          <label  class="label  capitalize text-neutral font-bold ">Amount to add</label>
+          <input id="cashIn_amount" type="number" class="input rounded-full w-full bg-base-200" placeholder="Enter your amount to withdraw" />
+          
+          <br>
+          <label  class="label  capitalize text-neutral font-bold ">Pin number</label>
+          <input id="bank_pin" type="password" class="input rounded-full w-full bg-base-200" placeholder="Enter your 4 digit pin" />
+          
+          <button id="cashIn_btn" class="btn btn-primary mt-4 rounded-full">Add Money</button>
+        
+        </fieldset>
+    </div>
+  </div>
+  </section>
+
+  <section id="cashout" class="container w-11/12 mx-auto py-5 hidden">
+      <h2 class="capitalize text-xl font-bold mb-5">Cash out</h2>
+
+      <div class="card bg-base-400 w-full shadow rounded-2xl">
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label capitalize text-neutral font-bold ">Agent number</label>
+            <input  id="agent_number" value="01799052958" type="number" maxlength="11" class="input w-full rounded-full bg-base-200" value="" placeholder="Enter your  11 digit agent number" />
+            <br>
+            <label  class="label  capitalize text-neutral font-bold ">Amount</label>
+            <input id="cashout_amount" type="number" class="input rounded-full w-full bg-base-200" placeholder="Enter your amount to withdraw" />
+            
+            <br>
+            <label  class="label  capitalize text-neutral font-bold ">Pin number</label>
+            <input id="cashout_pin" type="password" class="input rounded-full w-full bg-base-200" placeholder="Enter your 4 digit pin" />
+            
+            <button id="cashout_btn" class="btn btn-primary mt-4 rounded-full">Withdraw Money</button>
+          
+          </fieldset>
+      </div>
+    </div>
+  </section>
+
+  <section id="transfer" class="container w-11/12 mx-auto py-5 hidden">
         <h2 class="capitalize text-xl font-bold mb-5">Transfer Money</h2>
 
       <div class="card bg-base-400 w-full shadow rounded-2xl">
@@ -94,9 +146,57 @@
           </fieldset>
       </div>
     </div>
-    </section>
+  </section>
+
+  <section id="get_bonus" class="container w-11/12 mx-auto py-5 hidden">
+        <h2 class="capitalize text-xl font-bold mb-5">get bonus</h2>
+
+      <div class="card bg-base-400 w-full shadow rounded-2xl">
+        <div class="card-body">
+          <fieldset class="fieldset">
+            
+            <label  class="label  capitalize text-neutral font-bold ">Enter bonus coupon</label>
+            <input id="bonus_coupon" type="text" class="input rounded-full w-full bg-base-200" placeholder="Enter bonus coupon number" />
+            
+            <br>
+            
+            <button id="get_bonus_btn" class="capitalize btn btn-primary mt-4 rounded-full ">get bonus</button>
+          
+          </fieldset>
+      </div>
+    </div>
+  </section>
+
+  <section id="pay_bill" class="container w-11/12 mx-auto py-5 hidden">
+    <h2 class="capitalize text-xl font-bold mb-5">Pay Bills</h2>
+    <div class="card bg-base-400 w-full shadow rounded-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+          <select id="bill_name" class="select my-2 select-ghost input w-full rounded-full bg-base-200 ">
+            <option disabled selected>Select To Pay</option>
+            <option>Electric Bill</option>
+            <option>Bank Deposit</option>
+            <option>Mobile Research</option>
+            <option>Gas Bill</option>
+          </select>
+          <label class="label capitalize text-neutral font-bold ">Bill Account Number</label>
+          <input  id="bill_account_number" value="01799052958" type="number" maxlength="11" class="input w-full rounded-full bg-base-200" value="" placeholder="Enter your 11 digit bill account number" />
+          <br>
+          <label  class="label  capitalize text-neutral font-bold ">Amount to pay</label>
+          <input id="pay_amount" type="number" class="input rounded-full w-full bg-base-200" placeholder="Enter your amount to withdraw" />
+          
+          <br>
+          <label  class="label  capitalize text-neutral font-bold ">Pin number</label>
+          <input id="account_pin" type="password" class="input rounded-full w-full bg-base-200" placeholder="Enter your 4 digit pin" />
+          
+          <button id="pay_now" class="btn btn-primary mt-4 rounded-full">Pay Now</button>
+        
+        </fieldset>
+    </div>
+  </div>
+  </section>
     
-    <!-- <section id="latest_payment" class="container mx-auto p-4 latest_payment_section bg-[#f4f5f7] pt-6 pb-6">
+  <section id="transactions" class="container mx-auto p-4 latest_payment_section bg-[#f4f5f7] pt-6 pb-6 hidden">
       <div class="payment_title flex flex-row justify-between items-center pb-4">
         <h2 class="text-2xl capitalize font-bold">latest payment</h2>
         <p class="capitalize text-[#707070]">view all</p>
@@ -166,68 +266,22 @@
     
       
         
-
+        
       </div>
-    </section> -->
+  </section>
     
-    <!-- <section id="add_money" class="w-11/12 mx-auto py-5">
-      <h2 class="capitalize text-xl font-bold mb-5">Add Money</h2>
-      <div class="card bg-base-400 w-full shadow rounded-2xl">
-        <div class="card-body">
-          <fieldset class="fieldset">
-            <select id="bank_name" class="select my-2 select-ghost input w-full rounded-full bg-base-200 ">
-              <option disabled selected>Select Bank</option>
-              <option>Pubali</option>
-              <option>Sonali</option>
-              <option>IBM</option>
-            </select>
-            <label class="label capitalize text-neutral font-bold ">Bank Account Number</label>
-            <input  id="account_number" value="01799052958" type="number" maxlength="11" class="input w-full rounded-full bg-base-200" value="" placeholder="Enter your  11 digit account number" />
-            <br>
-            <label  class="label  capitalize text-neutral font-bold ">Amount to add</label>
-            <input id="cashIn_amount" type="number" class="input rounded-full w-full bg-base-200" placeholder="Enter your amount to withdraw" />
-            
-            <br>
-            <label  class="label  capitalize text-neutral font-bold ">Pin number</label>
-            <input id="bank_pin" type="password" class="input rounded-full w-full bg-base-200" placeholder="Enter your 4 digit pin" />
-            
-            <button id="cashIn_btn" class="btn btn-primary mt-4 rounded-full">Add Money</button>
-          
-          </fieldset>
-      </div>
-    </div>
-    </section> -->
     
-    <!-- <section id="cashout" class="w-11/12 mx-auto py-5">
-      <h2 class="capitalize text-xl font-bold mb-5">Cash out</h2>
-
-      <div class="card bg-base-400 w-full shadow rounded-2xl">
-        <div class="card-body">
-          <fieldset class="fieldset">
-            <label class="label capitalize text-neutral font-bold ">Agent number</label>
-            <input  id="agent_number" value="01799052958" type="number" maxlength="11" class="input w-full rounded-full bg-base-200" value="" placeholder="Enter your  11 digit agent number" />
-            <br>
-            <label  class="label  capitalize text-neutral font-bold ">Amount</label>
-            <input id="cashout_amount" type="number" class="input rounded-full w-full bg-base-200" placeholder="Enter your amount to withdraw" />
-            
-            <br>
-            <label  class="label  capitalize text-neutral font-bold ">Pin number</label>
-            <input id="cashout_pin" type="password" class="input rounded-full w-full bg-base-200" placeholder="Enter your 4 digit pin" />
-            
-            <button id="cashout_btn" class="btn btn-primary mt-4 rounded-full">Withdraw Money</button>
-          
-          </fieldset>
-      </div>
-    </div>
-    </section> -->
+   
 
 
 
 
-    <script src="./script/home.js"></script>
-    <script src="./script/machin.js"></script>
-    <script src="./script/transfer.js"></script>
+  <script src="./script/machin.js"></script>
+  <script src="./script/home.js"></script>
     <script src="./script/addMoney.js"></script>
     <script src="./script/cashout.js"></script>
+    <script src="./script/get_bonus.js"></script>
+    <script src="./script/pay_bill.js"></script>
+    <script src="./script/transfer.js"></script>
 </body>
 </html>
