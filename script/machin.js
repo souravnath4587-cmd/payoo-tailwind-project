@@ -7,3 +7,12 @@ function balanceFromInput(id){
   const balanceElement = document.getElementById(id);
   return balanceElement.innerText;
 }
+
+function getBalance(){
+  const balance = document.getElementById("balance").innerText;
+    return Number(balance);
+}
+
+function setBalance(value){
+  const setBalance = document.getElementById("balance").innerText = value;
+}
